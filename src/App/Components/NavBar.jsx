@@ -1,7 +1,6 @@
-import { Cancel01Icon } from "@animateicons/react/huge";
-import { MenuIcon } from "@animateicons/react/lucide";
 import { useState } from "react";
 import { FaRegClock } from "react-icons/fa";
+import { IoClose, IoMenu } from "react-icons/io5";
 import { LuHouse } from "react-icons/lu";
 import { TfiStatsUp } from "react-icons/tfi";
 import { Link, NavLink } from "react-router";
@@ -10,7 +9,7 @@ const NavBar = () => {
   const [showMenue, setShowMenue] = useState(false);
 
   return (
-    <div className="navbar bg-base-100 shadow-sm container mx-auto max-md:flex justify-between">
+    <div className="navbar shadow-md bg-white container mx-auto max-md:flex justify-between">
       <div className="navbar-start">
         <Link to={"/"} className="">
           <span className="font-extrabold text-2xl text-[#1F2937s]">Keen</span>
@@ -18,7 +17,7 @@ const NavBar = () => {
         </Link>
       </div>
 
-      <div className="navbar-end max-md:hidden">
+      <div className="navbar-end join max-md:hidden">
         <NavLink
           className={({ isActive }) =>
             `btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
@@ -45,18 +44,24 @@ const NavBar = () => {
           Stats
         </NavLink>
       </div>
+
+      {/*  */}
+
       <div className="md:hidden">
         {!showMenue ? (
-          <MenuIcon
+          <IoMenu
             onClick={() => setShowMenue(!showMenue)}
-            className="btn btn-soft"
-            size={24}
+            onFocus={() => setShowMenue(!showMenue)}
+            onBlur={() => setShowMenue(!showMenue)}
+            className="btn font-bold btn-soft"
+            size={16}
             duration={1.5}
             color="#000"
           />
         ) : (
-          <Cancel01Icon
+          <IoClose
             onClick={() => setShowMenue(!showMenue)}
+            onBlur={() => setShowMenue(!showMenue)}
             className="btn btn-soft"
             size={24}
             duration={1.5}
@@ -66,11 +71,11 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`absolute duration-1000  right-2 bg-base-300 p-2 rounded-xl flex flex-col gap-1 ${showMenue === true ? "top-16" : "-top-79"}  `}
+        className={`absolute duration-1000  right-2 bg-base-300 p-2 rounded-xl flex flex-col join join-vertical md:hidden ${showMenue === true ? "top-16" : "-top-79"}`}
       >
         <NavLink
           className={({ isActive }) =>
-            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "btn-outline border-gray-300 text-gray-600"}`
+            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
           }
           to={"/"}
         >
@@ -78,7 +83,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "btn-outline border-gray-300 text-gray-600"}`
+            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
           }
           to={"/timeline"}
         >
@@ -86,7 +91,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "btn-outline border-gray-300 text-gray-600"}`
+            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
           }
           to={"stats"}
         >

@@ -1,122 +1,98 @@
 [
   {
     "id": 1,
-    "name": "Maya Rahman",
-    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    "email": "maya.rahman@example.com",
-    "days_since_contact": 18,
-    "status": "overdue",
-    "tags": [
-      "university",
-      "close friend"
-    ],
-    "bio": "Met during our first year at university. We still trade book recommendations and grab coffee after class.",
+    "name": "Aisha Patel",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
+    "email": "aisha.patel@example.com",
+    "days_since_contact": 7,
+    "status": "On-Track",
+    "tags": ["hobby", "travel"],
+    "bio": "We met during our first semester and still catch up to compare notes, talk about life, and plan weekend coffee dates.",
     "goal": 14,
-    "next_due_date": "2026-09-26"
+    "next_due_date": "2026-10-10"
   },
   {
     "id": 2,
-    "name": "Daniel Kim",
-    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-    "email": "daniel.kim@example.com",
-    "days_since_contact": 10,
-    "status": "almost due",
-    "tags": [
-      "school",
-      "gaming"
-    ],
-    "bio": "A longtime friend from school who introduced me to strategy games and weekend game nights.",
-    "goal": 14,
-    "next_due_date": "2026-10-04"
+    "name": "Marcus Lee",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+    "email": "marcus.lee@example.com",
+    "days_since_contact": 14,
+    "status": "Almost Due",
+    "tags": ["work"],
+    "bio": "A longtime friend from the gym who keeps me motivated with early morning workouts and healthy meal ideas.",
+    "goal": 21,
+    "next_due_date": "2026-10-05"
   },
   {
     "id": 3,
-    "name": "Sofia Martinez",
-    "picture": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce",
-    "email": "sofia.martinez@example.com",
-    "days_since_contact": 5,
-    "status": "on-track",
-    "tags": [
-      "work",
-      "photography"
-    ],
-    "bio": "We worked on the same design team and often go out to photograph city streets and architecture.",
-    "goal": 21,
-    "next_due_date": "2026-10-16"
+    "name": "Sofia Nguyen",
+    "picture": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+    "email": "sofia.nguyen@example.com",
+    "days_since_contact": 21,
+    "status": "Overdue",
+    "tags": ["family"],
+    "bio": "We worked together on a product launch and still plan trips together whenever life gives us a little extra free time.",
+    "goal": 30,
+    "next_due_date": "2026-09-28"
   },
   {
     "id": 4,
-    "name": "Ethan Brooks",
-    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
-    "email": "ethan.brooks@example.com",
-    "days_since_contact": 27,
-    "status": "overdue",
-    "tags": [
-      "childhood",
-      "hiking"
-    ],
-    "bio": "We grew up in the same neighborhood and still plan a hiking trip together whenever our schedules line up.",
-    "goal": 30,
-    "next_due_date": "2026-10-03"
+    "name": "Daniel Kim",
+    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80",
+    "email": "daniel.kim@example.com",
+    "days_since_contact": 4,
+    "status": "On-Track",
+    "tags": ["work"],
+    "bio": "We live in the same neighborhood and spend weekends hiking trails, grabbing food, and catching up on life.",
+    "goal": 10,
+    "next_due_date": "2026-10-12"
   },
   {
     "id": 5,
-    "name": "Aisha Patel",
-    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
-    "email": "aisha.patel@example.com",
-    "days_since_contact": 12,
-    "status": "almost due",
-    "tags": [
-      "college",
-      "study partner"
-    ],
-    "bio": "Met in a statistics course. We used to study together and now keep each other motivated on new projects.",
+    "name": "Priya Shah",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    "email": "priya.shah@example.com",
+    "days_since_contact": 11,
+    "status": "Almost Due",
+    "tags": ["work"],
+    "bio": "We met through a local book club and still swap recommendations, talk books, and meet for brunch after each discussion.",
     "goal": 14,
-    "next_due_date": "2026-10-02"
+    "next_due_date": "2026-10-08"
   },
   {
     "id": 6,
-    "name": "Lucas Chen",
-    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-    "email": "lucas.chen@example.com",
-    "days_since_contact": 3,
-    "status": "on-track",
-    "tags": [
-      "neighbor",
-      "basketball"
-    ],
-    "bio": "Lives a few blocks away and is my regular basketball partner for early evening pickup games.",
-    "goal": 10,
-    "next_due_date": "2026-10-07"
+    "name": "Liam Foster",
+    "picture": "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=80",
+    "email": "liam.foster@example.com",
+    "days_since_contact": 9,
+    "status": "On-Track",
+    "tags": ["hobby", "travel"],
+    "bio": "We grew up in the same block and still meet for pickup basketball and weekend city walks whenever we can.",
+    "goal": 14,
+    "next_due_date": "2026-10-15"
   },
   {
     "id": 7,
     "name": "Nora Williams",
-    "picture": "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+    "picture": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
     "email": "nora.williams@example.com",
-    "days_since_contact": 16,
-    "status": "overdue",
-    "tags": [
-      "former coworker",
-      "music"
-    ],
-    "bio": "We became friends while working together and bonded over live music, especially small local concerts.",
-    "goal": 14,
-    "next_due_date": "2026-09-28"
+    "days_since_contact": 18,
+    "status": "Overdue",
+    "tags": ["work"],
+    "bio": "We became friends while working together and bonded over live music, small venues, and weekday coffee breaks.",
+    "goal": 21,
+    "next_due_date": "2026-09-30"
   },
   {
     "id": 8,
     "name": "Omar Hassan",
-    "picture": "https://images.unsplash.com/photo-1504257432389-52343af06ae3",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
     "email": "omar.hassan@example.com",
-    "days_since_contact": 8,
-    "status": "on-track",
-    "tags": [
-      "university",
-      "coding"
-    ],
-    "bio": "A university friend who enjoys building side projects and discussing new programming tools over lunch.",
+    "days_since_contact": 6,
+    "status": "On-Track",
+    "tags": ["family"],
+    "bio": "A university friend who loves building side projects and discussing design ideas over lunch every few weeks.",
     "goal": 14,
-    "next_due_date": "2026-10-06"
+    "next_due_date": "2026-10-14"
   }
 ]

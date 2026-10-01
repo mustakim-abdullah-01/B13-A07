@@ -7,7 +7,7 @@ const ErrorPage = () => {
     <main className="min-h-screen bg-base-100 text-base-content flex items-center justify-center px-6">
       <div className="w-full max-w-lg text-center">
         {/* Error Code */}
-        <p className="text-sm font-medium tracking-widest text-primary uppercase mb-4">
+        <p className="text-sm font-medium tracking-widest text-[#244D3F] uppercase mb-4">
           404 • Page not found
         </p>
 
@@ -26,7 +26,7 @@ const ErrorPage = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
             onClick={() => navigate(-1)}
-            className="btn btn-primary rounded-xl px-7"
+            className="btn bg-[#244D3F] text-white rounded-xl px-7"
           >
             {" "}
             Go back{" "}
@@ -36,7 +36,7 @@ const ErrorPage = () => {
         {/* Small visual */}
         <div className="mt-12 flex justify-center">
           <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+            <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-[#244D3F]">
               <span className="text-sm">●</span>
             </div>
 
