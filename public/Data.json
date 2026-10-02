@@ -7,7 +7,7 @@
     "days_since_contact": 7,
     "status": "On-Track",
     "tags": ["hobby", "travel"],
-    "bio": "We met during our first semester and still catch up to compare notes, talk about life, and plan weekend coffee dates.",
+    "bio": "Former classmate, great friend",
     "goal": 14,
     "next_due_date": "2026-10-10"
   },
@@ -19,7 +19,7 @@
     "days_since_contact": 14,
     "status": "Almost Due",
     "tags": ["work"],
-    "bio": "A longtime friend from the gym who keeps me motivated with early morning workouts and healthy meal ideas.",
+    "bio": "Gym buddy, keeps me motivated",
     "goal": 21,
     "next_due_date": "2026-10-05"
   },
@@ -31,7 +31,7 @@
     "days_since_contact": 21,
     "status": "Overdue",
     "tags": ["family"],
-    "bio": "We worked together on a product launch and still plan trips together whenever life gives us a little extra free time.",
+    "bio": "Former teammate, always fun to travel with",
     "goal": 30,
     "next_due_date": "2026-09-28"
   },
@@ -43,7 +43,7 @@
     "days_since_contact": 4,
     "status": "On-Track",
     "tags": ["work"],
-    "bio": "We live in the same neighborhood and spend weekends hiking trails, grabbing food, and catching up on life.",
+    "bio": "Neighborhood friend, always up for a hike",
     "goal": 10,
     "next_due_date": "2026-10-12"
   },
@@ -55,7 +55,7 @@
     "days_since_contact": 11,
     "status": "Almost Due",
     "tags": ["work"],
-    "bio": "We met through a local book club and still swap recommendations, talk books, and meet for brunch after each discussion.",
+    "bio": "Book club friend, great conversation",
     "goal": 14,
     "next_due_date": "2026-10-08"
   },
@@ -67,7 +67,7 @@
     "days_since_contact": 9,
     "status": "On-Track",
     "tags": ["hobby", "travel"],
-    "bio": "We grew up in the same block and still meet for pickup basketball and weekend city walks whenever we can.",
+    "bio": "Childhood friend, always game for basketball",
     "goal": 14,
     "next_due_date": "2026-10-15"
   },
@@ -79,7 +79,7 @@
     "days_since_contact": 18,
     "status": "Overdue",
     "tags": ["work"],
-    "bio": "We became friends while working together and bonded over live music, small venues, and weekday coffee breaks.",
+    "bio": "Former colleague, great mentor",
     "goal": 21,
     "next_due_date": "2026-09-30"
   },
@@ -91,7 +91,7 @@
     "days_since_contact": 6,
     "status": "On-Track",
     "tags": ["family"],
-    "bio": "A university friend who loves building side projects and discussing design ideas over lunch every few weeks.",
+    "bio": "College friend, loves side-project chats",
     "goal": 14,
     "next_due_date": "2026-10-14"
   }

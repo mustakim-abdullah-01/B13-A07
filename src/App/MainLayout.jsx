@@ -1,13 +1,15 @@
 import { Outlet } from "react-router";
 import NavBar from "./Components/NavBar";
+import Footer from "./Components/Footer";
 
 const MainLayout = () => {
   return (
     <div>
       <NavBar />
-      <div className="bg-[#F8FAFC] container mx-auto pt-20">
+      <div className="bg-[#f8fafcc4] container mx-auto pt-20">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 };

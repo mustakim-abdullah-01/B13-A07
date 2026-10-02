@@ -9,7 +9,7 @@ const NavBar = () => {
   const [showMenue, setShowMenue] = useState(false);
 
   return (
-    <div className="navbar shadow-md bg-white container mx-auto max-md:flex justify-between">
+    <div className="navbar bg-white mx-auto max-md:flex justify-between">
       <div className="navbar-start">
         <Link to={"/"} className="">
           <span className="font-extrabold text-2xl text-[#1F2937s]">Keen</span>
@@ -20,7 +20,7 @@ const NavBar = () => {
       <div className="navbar-end join max-md:hidden">
         <NavLink
           className={({ isActive }) =>
-            `btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
+            `border text-success-content border-[#64748B]/30 rounded-l-2xl btn ${isActive ? "bg-[#244D3F] text-white shadow-2xs shadow-success-content" : ""}`
           }
           to={"/"}
         >
@@ -28,7 +28,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
+            `border text-success-content border-[#64748B]/30 btn ${isActive ? "bg-[#244D3F] text-white shadow-2xs shadow-success-content" : "text-gray-600"}`
           }
           to={"/timeline"}
         >
@@ -36,7 +36,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `btn ${isActive ? "bg-green-900 text-white" : "text-gray-600"}`
+            `border text-success-content border-[#64748B]/30 rounded-r-2xl btn ${isActive ? "bg-green-900 text-white shadow-2xs shadow-success-content" : "text-gray-600"}`
           }
           to={"stats"}
         >
@@ -71,11 +71,11 @@ const NavBar = () => {
       </div>
 
       <div
-        className={`absolute duration-1000  right-2 bg-base-300 p-2 rounded-xl flex flex-col join join-vertical md:hidden ${showMenue === true ? "top-16" : "-top-79"}`}
+        className={`absolute duration-1000 border border-[#64748B]/30 shadow-lg right-2 bg-base-300 p-2 rounded-2xl flex flex-col join join-vertical md:hidden ${showMenue === true ? "top-16" : "-top-79"}`}
       >
         <NavLink
           className={({ isActive }) =>
-            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
+            `border border-[#64748B]/30 rounded-t-2xl w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
           }
           to={"/"}
         >
@@ -83,7 +83,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
+            `border border-[#64748B]/30 w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
           }
           to={"/timeline"}
         >
@@ -91,7 +91,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
+            `border border-[#64748B]/30 rounded-b-2xl w-28 btn ${isActive ? "bg-[#244D3F] text-white" : "text-gray-600"}`
           }
           to={"stats"}
         >

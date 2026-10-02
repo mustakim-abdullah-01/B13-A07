@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
         loader: async () => {
-          return await fetch("/public/Data.json");
+          return await fetch("/Data.json");
         },
         hydrateFallbackElement: <HydrationFallBack />,
       },
@@ -29,10 +29,10 @@ export const router = createBrowserRouter([
       },
       { path: "stats", element: <StatsPage /> },
       {
-        path: "/contact-details/:id",
+        path: "/contact-details/:idNo",
         element: <FriendsDetails />,
         loader: async () => {
-          return await fetch("/public/Data.json");
+          return await fetch("/Data.json");
         },
         hydrateFallbackElement: <HydrationFallBack />,
       },
