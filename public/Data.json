@@ -94,5 +94,53 @@
     "bio": "College friend, loves side-project chats",
     "goal": 14,
     "next_due_date": "2026-10-14"
+  },
+  {
+    "id": 9,
+    "name": "Elena Garcia",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
+    "email": "elena.garcia@example.com",
+    "days_since_contact": 13,
+    "status": "Almost Due",
+    "tags": ["hobby", "travel"],
+    "bio": "Former classmate, great friend",
+    "goal": 14,
+    "next_due_date": "2026-10-09"
+  },
+  {
+    "id": 10,
+    "name": "Ethan Brown",
+    "picture": "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=800&q=80",
+    "email": "ethan.brown@example.com",
+    "days_since_contact": 20,
+    "status": "Overdue",
+    "tags": ["work"],
+    "bio": "Former classmate, great friend",
+    "goal": 14,
+    "next_due_date": "2026-09-30"
+  },
+  {
+    "id": 11,
+    "name": "Maya Thompson",
+    "picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+    "email": "maya.thompson@example.com",
+    "days_since_contact": 5,
+    "status": "On-Track",
+    "tags": ["hobby", "travel"],
+    "bio": "Former classmate, great friend",
+    "goal": 14,
+    "next_due_date": "2026-10-15"
+  },
+  {
+    "id": 12,
+    "name": "Lucas Martinez",
+    "picture": "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80",
+    "email": "lucas.martinez@example.com",
+    "days_since_contact": 12,
+    "status": "Almost Due",
+    "tags": ["work"],
+    "bio": "Former classmate, great friend",
+    "goal": 14,
+    "next_due_date": "2026-10-08"
   }
 ]

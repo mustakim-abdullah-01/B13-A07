@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import logo from "../../assets/KeenKeeper.png";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { SiInstagram } from "react-icons/si";
+import { LiaFacebook } from "react-icons/lia";
+import { BsTwitterX } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -13,32 +15,32 @@ const Footer = () => {
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>
-        <p className="font-medium text-xl mb-4">Social Links</p>
-        <div className="flex justify-center items-center gap-3 mb-10">
+        <p className="mb-4 text-xl font-medium">Social Links</p>
+        <div className="flex items-center justify-center gap-3 mb-10">
           <a
             className="p-[10px] text-black bg-white rounded-full"
             href="https://www.google.com"
           >
-            <FaInstagram />
+            <SiInstagram size={20} />
           </a>
           <a
             className="p-[10px] text-black bg-white rounded-full"
             href="https://www.google.com"
           >
-            <FaFacebook />
+            <LiaFacebook size={20} />
           </a>
           <a
             className="p-[10px] text-black bg-white rounded-full"
             href="https://www.google.com"
           >
-            <FaTwitter />
+            <BsTwitterX size={19} />
           </a>
         </div>
-        <div className="flex justify-between items-center border-t border-t-white/10 pt-8 text-white/50 gap-60">
-          <div>
+        <div className="flex flex-wrap items-center justify-between gap-20 pt-8 text-center border-t max-md:flex-col border-t-white/10 text-white/50 md:gap-60">
+          <div className="flex items-center justify-center">
             <p>© 2026 KeenKeeper. All rights reserved.</p>
           </div>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap gap-6 md:gap-8">
             <p>
               <Link to={"/privacy-policy"}>Privacy Policy</Link>
             </p>

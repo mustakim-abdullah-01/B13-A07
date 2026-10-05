@@ -1,8 +1,6 @@
+import { ChartPie, Clock, House, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { FaRegClock } from "react-icons/fa";
-import { IoClose, IoMenu } from "react-icons/io5";
-import { LuHouse } from "react-icons/lu";
-import { TfiStatsUp } from "react-icons/tfi";
+
 import { Link, NavLink } from "react-router";
 
 const NavBar = () => {
@@ -24,7 +22,7 @@ const NavBar = () => {
           }
           to={"/"}
         >
-          <LuHouse /> Home
+          <House size={16} /> Home
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -32,7 +30,7 @@ const NavBar = () => {
           }
           to={"/timeline"}
         >
-          <FaRegClock /> Timeline
+          <Clock size={16} /> Timeline
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -40,8 +38,7 @@ const NavBar = () => {
           }
           to={"stats"}
         >
-          <TfiStatsUp />
-          Stats
+          <ChartPie size={16} /> Stats
         </NavLink>
       </div>
 
@@ -49,7 +46,7 @@ const NavBar = () => {
 
       <div className="md:hidden">
         {!showMenue ? (
-          <IoMenu
+          <Menu
             onClick={() => setShowMenue(!showMenue)}
             onFocus={() => setShowMenue(!showMenue)}
             onBlur={() => setShowMenue(!showMenue)}
@@ -59,7 +56,7 @@ const NavBar = () => {
             color="#000"
           />
         ) : (
-          <IoClose
+          <X
             onClick={() => setShowMenue(!showMenue)}
             onBlur={() => setShowMenue(!showMenue)}
             className="btn btn-soft"
@@ -79,7 +76,7 @@ const NavBar = () => {
           }
           to={"/"}
         >
-          <LuHouse /> Home
+          <House size={16} /> Home
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -87,7 +84,7 @@ const NavBar = () => {
           }
           to={"/timeline"}
         >
-          <FaRegClock /> Timeline
+          <Clock size={16} /> Timeline
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -95,8 +92,7 @@ const NavBar = () => {
           }
           to={"stats"}
         >
-          <TfiStatsUp />
-          Stats
+          <ChartPie size={16} /> Stats
         </NavLink>
       </div>
     </div>

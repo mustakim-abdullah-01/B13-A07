@@ -26,6 +26,7 @@ export const router = createBrowserRouter([
       {
         path: "timeline",
         element: <TimeLinePage />,
+        hydrateFallbackElement: <HydrationFallBack />,
       },
       { path: "stats", element: <StatsPage /> },
       {

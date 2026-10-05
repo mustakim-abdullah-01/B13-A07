@@ -1,9 +1,15 @@
-import { IoVideocamOutline } from "react-icons/io5";
-import { LuArchive, LuPhoneCall } from "react-icons/lu";
-import { MdOutlineTextsms } from "react-icons/md";
-import { RiDeleteBin5Line, RiNotificationSnoozeLine } from "react-icons/ri";
+import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { Slide, ToastContainer, toast } from "react-toastify";
+import { FriendContext } from "../../../../Context/Context";
+import {
+  AlarmClockOff,
+  Archive,
+  MessageSquareMore,
+  PhoneCall,
+  Trash,
+  Video,
+} from "lucide-react";
 
 const FriendsDetails = () => {
   const params = useParams();
@@ -26,18 +32,26 @@ const FriendsDetails = () => {
     next_due_date,
   } = friend;
 
+  const FriendLogs = useContext(FriendContext);
+
+  const call = "Call";
+  const text = "Text";
+  const video = "Video";
+
+  const { hadleFriendLog } = FriendLogs;
+
   return (
-    <div className="pb-[93px] container mx-auto px-6 flex items-center justify-center gap-6 shadow-lg">
-      <div className="1st-part flex flex-col gap-4">
-        <div className="shadow-lg shadow-primary/20 hover:shadow-primary/60 duration-1000 flex flex-col justify-center items-center p-6 bg-white rounded-lg border border-[#64748B]/40">
+    <div className="pb-[93px] container mx-auto px-6 flex max-xl:flex-wrap items-center justify-center gap-6 shadow-lg">
+      <div className="flex flex-col gap-4 1st-part">
+        <div className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 flex flex-col justify-center items-center p-6 bg-white rounded-lg border border-[#64748B]/40">
           <div>
             <img
-              className="h-20 w-20 rounded-full object-cover"
+              className="object-cover w-20 h-20 rounded-full"
               src={picture}
               alt={name}
             />
           </div>
-          <p className="mt-3 mb-2 font-semibold text-xl">{name}</p>
+          <p className="mt-3 mb-2 text-xl font-semibold">{name}</p>
           <p
             className={`mb-2 badge text-white ${status === "Almost Due" ? "bg-[#EFAD44]" : status === "Overdue" ? "bg-[#EF4444]" : status === "On-Track" ? "bg-[#244D3F]" : ""}`}
           >
@@ -57,80 +71,89 @@ const FriendsDetails = () => {
         <div className="flex flex-col gap-2">
           <button
             onClick={() => toast.info(`Snoozed ${name} for 2 weeks`)}
-            className="shadow-lg shadow-primary/30 hover:shadow-primary/60 duration-500 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-secondary"
+            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-500 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-secondary"
           >
-            <RiNotificationSnoozeLine /> Snooze 2 weeks
+            <AlarmClockOff size={18} /> Snooze 2 weeks
           </button>
           <button
             onClick={() => toast.info(`Archived contact with ${name}`)}
-            className="shadow-lg shadow-primary/30 hover:shadow-primary/60 duration-500 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-info"
+            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-500 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-info"
           >
-            <LuArchive /> Archive
+            <Archive size={18} /> Archive
           </button>
           <button
             onClick={() => toast.warning(`Deleted contact for ${name}`)}
-            className="shadow-lg shadow-primary/30 hover:shadow-primary/60 duration-500 btn text-error font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40"
+            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-500 btn text-error font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40"
           >
-            <RiDeleteBin5Line /> Delete
+            <Trash size={18} /> Delete
           </button>
         </div>
       </div>
       <div className="2nd-part">
         <div>
-          <div className="flex gap-6 mb-6">
-            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-lg shadow-primary/20 hover:shadow-primary/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
+          <div className="flex items-center justify-center gap-6 mb-6 max-lg:flex-wrap">
+            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
               <p className="text-3xl text-[#244D3F] font-semibold">
                 {days_since_contact}
               </p>
               <p className="text-[#64748B] text-lg">Days Since Contact</p>
             </div>
-            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-lg shadow-primary/20 hover:shadow-primary/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
+            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
               <p className="text-3xl text-[#244D3F] font-semibold">{goal}</p>
               <p className="text-[#64748B] text-lg">Goal (Days)</p>
             </div>
-            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-lg shadow-primary/20 hover:shadow-primary/50 duration-500 border border-[#64748B]/30 rounded-lg bg-white">
+            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 border border-[#64748B]/30 rounded-lg bg-white">
               <p className="text-3xl text-[#244D3F] font-semibold">
                 {next_due_date}
               </p>
               <p className="text-[#64748B] text-lg">Next Due</p>
             </div>
           </div>
-          <div className="p-6 mb-6 shadow-lg shadow-primary/20 hover:shadow-primary/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
-            <div className="flex justify-between items-center mb-5">
+          <div className="p-6 mb-6 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
+            <div className="flex items-center justify-between mb-5">
               <h3 className="text-xl font-medium text-[#244D3F]">
                 Relationship Goal
               </h3>
               <button className="btn h-8.5 w-15">Edit</button>
             </div>
             <p className="text-[#64748B] text-lg">
-              Connect every{" "}
-              <span className="font-bold text-lg text-black">{goal} days</span>
+              Connect every
+              <span className="text-lg font-bold text-black"> {goal} days</span>
             </p>
           </div>
-          <div className="p-6 shadow-lg shadow-primary/20 hover:shadow-primary/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white flex flex-col text-start justify-center">
+          <div className="p-6 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white flex flex-wrap flex-col text-start justify-center">
             <h3 className="text-xl font-medium text-[#244D3F] mb-4">
               Quick Check-In
             </h3>
-            <div className="flex jubstify-between items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:jubstify-between">
               <button
-                onClick={() => toast.success(`📞 Calling ${name} `)}
-                className="btn hadow-lg shadow-primary/20 hover:shadow-primary/50 duration-1000 border border-[#64748B]/50 rounded-lg text-xl flex flex-col p-4 h-24 w-[220px] text-indigo-600"
+                onClick={() => {
+                  (hadleFriendLog(friend, call),
+                    toast.success(`📞 Calling ${name}`));
+                }}
+                className="btn border border-[#64748B]/50 rounded-lg text-xl flex flex-col p-4 h-24 w-[220px] text-indigo-600"
               >
-                <LuPhoneCall />
+                <PhoneCall size={22} />
                 Call
               </button>
               <button
-                onClick={() => toast.success(`📜 Text ${name}`)}
-                className="btn hadow-lg shadow-primary/20 hover:shadow-primary/50 duration-1000 border border-[#64748B]/50 rounded-lg text-xl flex flex-col p-4 h-24 w-[220px] text-emerald-600"
+                onClick={() => {
+                  (hadleFriendLog(friend, text),
+                    toast.success(`📜 Text ${name}`));
+                }}
+                className="btn border border-[#64748B]/50 rounded-lg text-xl flex flex-col p-4 h-24 w-[220px] text-emerald-600"
               >
-                <MdOutlineTextsms />
+                <MessageSquareMore size={22} />
                 Text
               </button>
               <button
-                onClick={() => toast.success(`🎥 Video Calling ${name}`)}
-                className="btn hadow-lg shadow-primary/20 hover:shadow-primary/50 duration-1000 border border-[#64748B]/50 rounded-lg text-xl flex flex-col p-4 h-24 w-[220px] text-rose-600"
+                onClick={() => {
+                  (hadleFriendLog(friend, video),
+                    toast.success(`🎥 Video Calling ${name}`));
+                }}
+                className="btn border border-[#64748B]/50 rounded-lg text-xl flex flex-col p-4 h-24 w-[220px] text-rose-600"
               >
-                <IoVideocamOutline />
+                <Video size={24} />
                 Video
               </button>
             </div>
