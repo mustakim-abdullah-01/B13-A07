@@ -3,9 +3,9 @@ import HomePage from "../App/Pages/Home/Home";
 import ErrorPage from "../App/Pages/Error/Error";
 import MainLayout from "../App/MainLayout";
 import TimeLinePage from "../App/Pages/Timeline/Timeline";
-import StatsPage from "../App/Pages/Stats/Stats";
 import HydrationFallBack from "../App/Components/HydrationFallback";
 import FriendsDetails from "../App/Pages/Home/Components/FriendsDetails";
+import Stats from "../App/Pages/Stats/Stats";
 
 //
 
@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
         element: <TimeLinePage />,
         hydrateFallbackElement: <HydrationFallBack />,
       },
-      { path: "stats", element: <StatsPage /> },
+      { path: "stats", element: <Stats /> },
       {
         path: "/contact-details/:idNo",
         element: <FriendsDetails />,
