@@ -7,7 +7,7 @@ const NavBar = () => {
   const [showMenue, setShowMenue] = useState(false);
 
   return (
-    <div className="navbar bg-white mx-auto max-md:flex justify-between">
+    <div className="justify-between px-8 mx-auto bg-white navbar max-md:flex border-b border-[#64748B]/10">
       <div className="navbar-start">
         <Link to={"/"} className="">
           <span className="font-extrabold text-2xl text-[#1F2937s]">Keen</span>
@@ -18,7 +18,7 @@ const NavBar = () => {
       <div className="navbar-end join max-md:hidden">
         <NavLink
           className={({ isActive }) =>
-            `border text-success-content border-[#64748B]/30 rounded-l-2xl btn ${isActive ? "bg-[#244D3F] text-white shadow-2xs shadow-success-content" : ""}`
+            `border text-[#64748B] border-[#64748B]/30 rounded-l-lg btn ${isActive ? "bg-[#244D3F] text-white shadow-success-content" : ""}`
           }
           to={"/"}
         >
@@ -26,7 +26,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `border text-success-content border-[#64748B]/30 btn ${isActive ? "bg-[#244D3F] text-white shadow-2xs shadow-success-content" : "text-gray-600"}`
+            `border text-[#64748B] border-[#64748B]/30 btn ${isActive ? "bg-[#244D3F] text-white shadow-success-content" : "text-gray-600"}`
           }
           to={"/timeline"}
         >
@@ -34,7 +34,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) =>
-            `border text-success-content border-[#64748B]/30 rounded-r-2xl btn ${isActive ? "bg-green-900 text-white shadow-2xs shadow-success-content" : "text-gray-600"}`
+            `border text-[#64748B] border-[#64748B]/30 rounded-r-lg btn ${isActive ? "bg-green-900 text-white shadow-success-content" : "text-gray-600"}`
           }
           to={"stats"}
         >
@@ -50,7 +50,7 @@ const NavBar = () => {
             onClick={() => setShowMenue(!showMenue)}
             onFocus={() => setShowMenue(!showMenue)}
             onBlur={() => setShowMenue(!showMenue)}
-            className="btn font-bold btn-soft"
+            className="font-bold btn btn-soft"
             size={16}
             duration={1.5}
             color="#000"

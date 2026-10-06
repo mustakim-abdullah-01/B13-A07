@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router";
+import { FriendContext } from "../../../../Context/Context";
 
 const HeroCards = () => {
   const friends = useLoaderData();
+
+  const Context = useContext(FriendContext);
 
   const onTrack = friends.filter((friend) => friend.status === "On-Track");
 
@@ -9,35 +13,40 @@ const HeroCards = () => {
     (friend) => friend.status === "Almost Due" || friend.status === "Overdue",
   );
 
+  const styles = {
+    cardStyle:
+      "flex flex-col justify-center items-center p-8 rounded-3xl gap-2 shadow-lg shadow-green-500/20 hover:shadow-green-500/50 hover:scale-105 hover:border hover:border-[#64748B]/40 duration-300 border border-[#64748B]/30",
+    cardHeadingStyle: "text-[#244D3F] font-semibold text-4xl",
+    cardParagraphStyle: "text-[#64748B] text-lg",
+  };
+
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-6 mb-10 px-4 border-b border-b-[#E9E9E9] pb-10">
       {/*  */}
 
-      <div className="flex flex-col justify-center items-center p-8 rounded-3xl gap-2 shadow-lg shadow-info/20 hover:shadow-info/50 duration-1000 border border-[#64748B]/30">
-        <h2 className="text-[#244D3F] font-semibold text-4xl">8</h2>
-        <p className="text-[#64748B] text-lg">Total Friends</p>
+      <div className={styles.cardStyle}>
+        <h2 className={styles.cardHeadingStyle}>{friends.length}</h2>
+        <p className={styles.cardParagraphStyle}>Total Friends</p>
       </div>
 
       {/*  */}
-      <div className="flex flex-col justify-center items-center p-8 rounded-3xl gap-2 shadow-lg shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30">
-        <h2 className="text-[#244D3F] font-semibold text-4xl">
-          {onTrack.length}
+      <div className={styles.cardStyle}>
+        <h2 className={styles.cardHeadingStyle}>{onTrack.length}</h2>
+        <p className={styles.cardParagraphStyle}>On Track</p>
+      </div>
+
+      {/*  */}
+      <div className={styles.cardStyle}>
+        <h2 className={styles.cardHeadingStyle}>{needAttention.length}</h2>
+        <p className={styles.cardParagraphStyle}>Need Attention</p>
+      </div>
+
+      {/*  */}
+      <div className={styles.cardStyle}>
+        <h2 className={styles.cardHeadingStyle}>
+          {Context.FriendLogObjectArray.length}
         </h2>
-        <p className="text-[#64748B] text-lg">On Track</p>
-      </div>
-
-      {/*  */}
-      <div className="flex flex-col justify-center items-center p-8 rounded-3xl gap-2 shadow-lg shadow-teal-500/20 hover:shadow-teal-500/50 duration-1000 border border-[#64748B]/30">
-        <h2 className="text-[#244D3F] font-semibold text-4xl">
-          {needAttention.length}
-        </h2>
-        <p className="text-[#64748B] text-lg">Need Attention</p>
-      </div>
-
-      {/*  */}
-      <div className="flex flex-col text-center justify-center items-center p-8 rounded-3xl gap-2 shadow-lg shadow-rose-500/20 hover:shadow-rose-500/50 duration-1000 border border-[#64748B]/30">
-        <h2 className="text-[#244D3F] font-semibold text-4xl">8</h2>
-        <p className="text-[#64748B] text-lg">Interactions This Month</p>
+        <p className={styles.cardParagraphStyle}>Interactions This Month</p>
       </div>
     </div>
   );

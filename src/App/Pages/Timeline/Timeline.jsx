@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { FriendContext } from "../../../Context/Context";
 import NoLogs from "../../Components/NoLogs";
 import LogCard from "./Components/LogCard";
+import { ListFilter } from "lucide-react";
 
 const TimeLinePage = () => {
   const friendLogs = useContext(FriendContext);
@@ -17,15 +18,15 @@ const TimeLinePage = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="mb-6 text-5xl font-bold">Timeline page</h1>
+      <h1 className="mb-6 text-5xl font-bold">Timeline</h1>
       <div className="pb-6">
-        <div className="dropdown">
+        <div className={`dropdown ${filterdLogs.length === 0 ? "hidden" : ""}`}>
           <div
             tabIndex={0}
             role="button"
-            className="btn m-1 shadow-lg shadow-primary/10 hover:shadow-primary/30 duration-1000 border border-[#64748B]/40 rounded-lg bg-white text-[#64748B] text-lg font-normal"
+            className="btn m-1 border border-[#64748B]/40 rounded-lg bg-white text-[#64748B] text-lg font-normal"
           >
-            Filter timeline
+            <ListFilter size={16} /> Filter timeline
           </div>
           <ul
             tabIndex={-1}

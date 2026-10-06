@@ -1,7 +1,7 @@
 const NoLogs = () => {
   return (
     <div>
-      <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm mb-10">
+      <div className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm mb-20">
         {" "}
         <div className="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-slate-100">
           {" "}

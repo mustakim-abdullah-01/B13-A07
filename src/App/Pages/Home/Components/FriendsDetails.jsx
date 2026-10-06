@@ -43,7 +43,7 @@ const FriendsDetails = () => {
   return (
     <div className="pb-[93px] container mx-auto px-6 flex max-xl:flex-wrap items-center justify-center gap-6 shadow-lg">
       <div className="flex flex-col gap-4 1st-part">
-        <div className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 flex flex-col justify-center items-center p-6 bg-white rounded-lg border border-[#64748B]/40">
+        <div className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 flex flex-col justify-center items-center p-6 bg-white rounded-lg border border-[#64748B]/40">
           <div>
             <img
               className="object-cover w-20 h-20 rounded-full"
@@ -71,19 +71,19 @@ const FriendsDetails = () => {
         <div className="flex flex-col gap-2">
           <button
             onClick={() => toast.info(`Snoozed ${name} for 2 weeks`)}
-            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-500 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-secondary"
+            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-secondary"
           >
             <AlarmClockOff size={18} /> Snooze 2 weeks
           </button>
           <button
             onClick={() => toast.info(`Archived contact with ${name}`)}
-            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-500 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-info"
+            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 btn font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40 text-info"
           >
             <Archive size={18} /> Archive
           </button>
           <button
             onClick={() => toast.warning(`Deleted contact for ${name}`)}
-            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-500 btn text-error font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40"
+            className="shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 btn text-error font-bold h-[53px] p-4 rounded-lg bg-white border border-[#64748B]/40"
           >
             <Trash size={18} /> Delete
           </button>
@@ -92,24 +92,24 @@ const FriendsDetails = () => {
       <div className="2nd-part">
         <div>
           <div className="flex items-center justify-center gap-6 mb-6 max-lg:flex-wrap">
-            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
+            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 border border-[#64748B]/30 rounded-lg bg-white">
               <p className="text-3xl text-[#244D3F] font-semibold">
                 {days_since_contact}
               </p>
               <p className="text-[#64748B] text-lg">Days Since Contact</p>
             </div>
-            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
+            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 border border-[#64748B]/30 rounded-lg bg-white">
               <p className="text-3xl text-[#244D3F] font-semibold">{goal}</p>
               <p className="text-[#64748B] text-lg">Goal (Days)</p>
             </div>
-            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 border border-[#64748B]/30 rounded-lg bg-white">
+            <div className="w-[260px] flex flex-col justify-center items-center p-8 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 border border-[#64748B]/30 rounded-lg bg-white">
               <p className="text-3xl text-[#244D3F] font-semibold">
                 {next_due_date}
               </p>
               <p className="text-[#64748B] text-lg">Next Due</p>
             </div>
           </div>
-          <div className="p-6 mb-6 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white">
+          <div className="p-6 mb-6 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 border border-[#64748B]/30 rounded-lg bg-white">
             <div className="flex items-center justify-between mb-5">
               <h3 className="text-xl font-medium text-[#244D3F]">
                 Relationship Goal
@@ -121,7 +121,7 @@ const FriendsDetails = () => {
               <span className="text-lg font-bold text-black"> {goal} days</span>
             </p>
           </div>
-          <div className="p-6 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-1000 border border-[#64748B]/30 rounded-lg bg-white flex flex-wrap flex-col text-start justify-center">
+          <div className="p-6 shadow-md shadow-green-500/20 hover:shadow-green-500/50 duration-300 border border-[#64748B]/30 rounded-lg bg-white flex flex-wrap flex-col text-start justify-center">
             <h3 className="text-xl font-medium text-[#244D3F] mb-4">
               Quick Check-In
             </h3>

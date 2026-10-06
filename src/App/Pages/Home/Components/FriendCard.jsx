@@ -6,7 +6,7 @@ const FriendCard = ({ friend }) => {
   return (
     <Link
       to={`/contact-details/${id}`}
-      className="p-6 shadow-md hover:shadow-emerald-400/70 hover:-translate-y-1 hover:scale-105 hover:transform-3d 0 duration-500 border border-[#64748B]/35 w-[259px] h-[254px] flex flex-col rounded-lg justify-center items-center bg-white"
+      className="p-6 shadow-md hover:shadow-emerald-400/70 hover:-translate-y-1 hover:scale-105 duration-300 border border-[#64748B]/35 w-[259px] h-[254px] flex flex-col rounded-lg justify-center items-center bg-white hover:border hover:border-[#64748B]/50"
     >
       <div className="mb-3">
         <img

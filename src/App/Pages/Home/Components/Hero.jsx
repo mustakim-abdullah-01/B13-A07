@@ -14,9 +14,9 @@ const Hero = () => {
           the relationships that matter most.
         </p>
         <div className="flex items-center justify-center">
-          <button className="btn bg-[#244D3F] text-white w-[148px] shadow shadow-primary-content">
+          <span className="btn bg-[#244D3F] text-white w-[148px] shadow-md shadow-green-500/30">
             <Plus size={16} /> Add a Friend
-          </button>
+          </span>
         </div>
       </div>
       <HeroCards />
